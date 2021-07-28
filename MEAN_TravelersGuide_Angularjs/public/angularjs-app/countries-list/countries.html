@@ -1,0 +1,9 @@
+
+<h1>Welcome to Travelers Guide</h1>
+
+<ul>
+    <li ng-repeat='country in travelerCtrl.countries track by $index'>
+        <a href="/#!/country/{{country._id}}">{{country.countryName}}</a>
+
+    </li>
+</ul>
