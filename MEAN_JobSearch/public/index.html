@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='jobSearchApp'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Job Search</title>
+</head>
+<body>
+
+    <job-navigation></job-navigation>
+
+    <div class='container' ng-view></div>
+
+      <!-- <footer class="card-footer ">
+        footer goes here
+      </footer> -->
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="angularjs-app/app.js"></script>
+    <script src="angularjs-app/data-factory/jobsFactory.js"></script>
+    <script src="angularjs-app/jobs-controller/jobs-Controller.js"></script>
+    <script src="angularjs-app/job-details/job-details-controller.js"></script>
+    <script src="angularjs-app/navigation/navigationController.js"></script>
+    <script src="angularjs-app/add-job/add-job-controller.js"></script>
+    <script src="angularjs-app/delete-job/delete-job-controller.js"></script>
+    <script src="angularjs-app/update-job/update-job-controller.js"></script>
+    <script src="angularjs-app/add-location-to-job/add-location-controller.js"></script>
+    <script src="angularjs-app/update-location-of-job/update-location-controller.js"></script>
+
+</body>
+</html>

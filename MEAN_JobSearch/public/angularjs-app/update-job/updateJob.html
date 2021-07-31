@@ -1,0 +1,48 @@
+<h1>Update Job Form</h1>
+<form name='updateCtrl.updateJobForm' ng-submit='updateCtrl.updateOneJob(); event.preventDefault()' class="form-group">
+
+
+    <label for="title">
+        title <input id="title" type="text" name='title' required ng-model='updateCtrl.jobToBeUpdated.title'
+            class="form-control" />
+    </label>
+    <br>
+
+    <label for="description">
+        Description <input type="text" name='description' id="description"
+            ng-model='updateCtrl.jobToBeUpdated.description' class="form-control" />
+    </label>
+    <br>
+
+    <label for="postDate">
+        Post Date <input type="date" name='postDate' id="postDate"
+            ng-value="updateCtrl.jobToBeUpdated.postDate | date:'yyyy-MM-dd'"
+            ng-init='updateCtrl.jobToBeUpdated.postDate' class="form-control" />
+    </label>
+
+    <br>
+
+    <label for="salary">
+        Salary <input type="number" name='salary' id="salary" ng-model='updateCtrl.jobToBeUpdated.salary'
+            class="form-control" />
+    </label>
+
+
+    <br>
+
+    <label for="skills">
+        Skills: <input type="text" name='skills' id="skills" ng-model='updateCtrl.jobToBeUpdated.skills'
+            class="form-control" />
+    </label>
+
+    <br>
+    <input type="submit" value="Update Job" class="btn btn-success">
+    <br>
+    <span style="color:red"
+        ng-show='updateCtrl.updateJobForm.$dirty && updateCtrl.updateJobForm.$invalid && updateCtrl.submitError'>Make
+        sure you fill out
+        all the neccessory fileds</span>
+
+    <span style="color:green" ng-show='updateCtrl.jobUpdated'>Job has been updated</span>
+
+</form>

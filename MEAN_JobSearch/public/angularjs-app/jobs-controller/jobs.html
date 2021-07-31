@@ -1,0 +1,32 @@
+<h1>Jobs you have marked so far</h1>
+
+<!-- <ul>
+    <li ng-repeat='job in jobsCtrl.jobs'>
+        <a href="/#!/jobDetails/{{job._id}}">{{job.title}}</a>
+        <a href="/#!/updateJob/{{job._id}}" class="btn btn-warning buttons">Update</a>
+        <a href="/#!/deleteJob/{{job._id}}" class="btn btn-danger buttons">Delete</a>
+        <a ng-hide='job.location.coordinates' href="/#!/addLocation/{{job._id}}" class="btn btn-success buttons">Add Location</a>
+        <a ng-show='job.location.coordinates' href="/#!/updateLocation/{{job._id}}" class="btn btn-primary buttons">Update Location</a>
+    </li>
+</ul> -->
+
+
+<table>
+    <thead>
+        <th>Job Title</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat='job in jobsCtrl.jobs'>
+            <td><a href="/#!/jobDetails/{{job._id}}">{{job.title}}</a></td>
+            <td><a href="/#!/updateJob/{{job._id}}" class="btn btn-warning buttons">Update</a></td>
+            <td><a href="/#!/deleteJob/{{job._id}}" class="btn btn-danger buttons">Delete</a> </td>
+            <td> <a ng-hide='job.location.coordinates' href="/#!/addLocation/{{job._id}}"
+                    class="btn btn-success buttons">Add Location</a>
+                <a ng-show='job.location.coordinates' href="/#!/updateLocation/{{job._id}}"
+                    class="btn btn-primary buttons">Update Location</a>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>

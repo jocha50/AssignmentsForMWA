@@ -1,0 +1,24 @@
+<h1>Add location form</h1>
+
+<form name='addLocationCtrl.addLocationForm' ng-submit='addLocationCtrl.addLocation(); event.preventDefault()' class="form-group">
+    
+    <br>
+    <label for="lng">
+        Coordinate longitude: <input id="lng" type="text" name='lng' required ng-model='addLocationCtrl.location.lng'
+            class="form-control" />
+    </label>
+    <br>
+
+    <label for="lat">
+        Coordinate latitude: <input type="text" name='lat' id="lat" ng-model='addLocationCtrl.location.lat'
+            class="form-control" />
+    </label>
+    <br>
+    <input type="submit" value="Add Location" class="btn btn-success">
+    <br>
+    <span style="color:red"
+        ng-show='addLocationCtrl.addLocationForm.$dirty && addLocationCtrl.addLocationForm.$invalid && addLocationCtrl.submitError'>Make sure you fill out
+        all the neccessory fileds</span>
+
+    <span style="color:green" ng-show='addLocationCtrl.locationAdded'>Location has been added to database</span>
+    </form>

@@ -1,0 +1,27 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin-bottom: 90px;
+  }
+
+  .buttons{
+    margin:10px;
+    border-radius: 20px;
+  }
+  footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 105px;
+      background-color:#f5f5f5;
+      padding-top: 5px;
+  }
+  table th,td{
+    padding: 0 10px;
+  }
+  table a{
+    text-decoration: none;
+  }
+  

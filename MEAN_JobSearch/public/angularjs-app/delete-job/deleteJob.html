@@ -1,0 +1,56 @@
+<div class="success" ng-show='deleteCtrl.status'>
+    <h1 style="color: green;">
+        {{deleteCtrl.job.title}} has been deleted!
+    </h1>
+   {{ $window.location.path('/')}}
+</div>
+<div ng-hide='deleteCtrl.status'>
+    <h1 style="color: red;"> Do you really want to delete
+        <p>
+            {{deleteCtrl.job.title}} ?
+        </p>
+    </h1>
+
+
+    <div>
+        <p>
+            Title: {{deleteCtrl.job.title}}
+        </p>
+    </div>
+
+    <div>
+        <p>
+            Description: {{deleteCtrl.job.description}}
+
+        </p>
+    </div>
+
+    <div>
+        <p>
+            Salary: {{deleteCtrl.job.salary | currency}}
+        </p>
+    </div>
+
+    <div>
+        <p>
+            Post Date: {{deleteCtrl.job.postDate |date}}
+        </p>
+    </div>
+    <div>
+        <ul> Skills needed:
+            <li ng-repeat='skill in deleteCtrl.job.skills track by $index'>
+
+                {{skill}}
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <button class="btn btn-danger" ng-click='deleteCtrl.confirmed=true; deleteCtrl.deleteOneJob()'>Confirm</button>
+    </div>
+
+
+
+
+
+</div>

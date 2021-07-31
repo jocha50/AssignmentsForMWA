@@ -1,0 +1,24 @@
+<h1>Update location form</h1>
+
+<form name='updateLocationCtrl.updateLocationForm' ng-submit='updateLocationCtrl.updateLocation(); event.preventDefault()' class="form-group">
+    
+    <br>
+    <label for="lng">
+        Coordinate longitude: <input id="lng" type="text" name='lng' required ng-model='updateLocationCtrl.locationToBeUpdated.lng'
+            class="form-control" />
+    </label>
+    <br>
+
+    <label for="lat">
+        Coordinate latitude: <input type="text" name='lat' id="lat" ng-model='updateLocationCtrl.locationToBeUpdated.lat'
+            class="form-control" />
+    </label>
+    <br>
+    <input type="submit" value="Update Location" class="btn btn-success">
+    <br>
+    <span style="color:red"
+        ng-show='updateLocationCtrl.updateLocationForm.$dirty && updateLocationCtrl.updateLocationForm.$invalid && updateLocationCtrl.submitError'>Make sure you fill out
+        all the neccessory fileds</span>
+
+    <span style="color:green" ng-show='updateLocationCtrl.locationUpdated'>Location has been added to database</span>
+    </form>

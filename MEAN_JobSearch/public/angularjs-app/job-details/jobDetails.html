@@ -1,0 +1,56 @@
+<h1> Job Details:
+    <p>
+        {{detailCtrl.job.title}}
+    </p>
+</h1>
+
+
+<div>
+    <p>
+        Title: {{detailCtrl.job.title}}
+    </p>
+</div>
+
+<div>
+    <p>
+        Description: {{detailCtrl.job.description}}
+
+    </p>
+</div>
+
+<div>
+    <p>
+        Salary: {{detailCtrl.job.salary | currency}}
+    </p>
+</div>
+
+<div>
+    <p>
+        Post Date: {{detailCtrl.job.postDate |date}}
+    </p>
+</div>
+<div>
+    <ul> Skills needed:
+        <li ng-repeat='skill in detailCtrl.job.skills track by $index'>
+
+            {{skill}}
+        </li>
+    </ul>
+</div>
+
+<div ng-show='detailCtrl.job.location.coordinates'> <span style="text-decoration: underline;">Location Coordinates</span>
+
+    
+    <table>
+        <thead>
+            <th>Longitude</th>
+            <th>Latitude</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{detailCtrl.job.location.coordinates[0]}}</td>
+                <td>{{detailCtrl.job.location.coordinates[1]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

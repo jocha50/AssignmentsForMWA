@@ -1,0 +1,44 @@
+<h1> Add Job Form</h1>
+<form name='addCtrl.addJobForm' ng-submit='addCtrl.addOneJob(); event.preventDefault()' class="form-group">
+   
+    <br>
+    <label for="title">
+        title: <input id="title" type="text" name='title' required ng-model='addCtrl.newJob.title'
+            class="form-control" />
+    </label>
+    <br>
+
+    <label for="description">
+        Description: <input type="text" name='description' id="description" ng-model='addCtrl.newJob.description'
+            class="form-control" />
+    </label>
+    <br>
+
+    <label for="postDate">
+        Post Date: <input type="date" name='postDate' id="postDate" ng-model='addCtrl.newJob.postDate'
+            class="form-control" />
+    </label>
+
+    <br>
+
+    <label for="salary">
+        Salary: <input type="number" name='salary' id="salary" ng-model='addCtrl.newJob.salary' class="form-control" />
+    </label>
+
+
+    <br>
+
+    <label for="skills">
+        Skills: <input type="text" name='skills' id="skills" ng-model='addCtrl.newJob.skills' class="form-control" />
+    </label>
+
+    <br>
+    <input type="submit" value="Add Job" class="btn btn-success">
+    <br>
+    <span style="color:red"
+        ng-show='addCtrl.addJobForm.$dirty && addCtrl.addJobForm.$invalid && addCtrl.submitError'>Make sure you fill out
+        all the neccessory fileds</span>
+
+    <span style="color:green" ng-show='addCtrl.jobAdded'>Job has been added to database</span>
+
+</form>
