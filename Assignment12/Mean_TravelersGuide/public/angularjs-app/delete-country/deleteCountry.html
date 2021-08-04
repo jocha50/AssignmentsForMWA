@@ -1,0 +1,30 @@
+<h1>Country details</h1>
+
+
+<div> Country Name: {{deleteCtrl.country.countryName}}</div>
+<div>Capital City: {{deleteCtrl.country.capitalCity}}</div>
+<div>Offical Language: {{deleteCtrl.country.officialLanguage}}</div>
+<div> Currency Type : {{deleteCtrl.country.currency}}</div>
+<div> Population: {{deleteCtrl.country.population}}</div>
+<div>Time Zone: {{deleteCtrl.country.additionalInfo.timeZone}}
+</div>
+
+<div>Best time to Visit: {{deleteCtrl.country.additionalInfo.bestTimeToVisit}}</div>
+
+<div>
+    <br>
+    <b>Best Hotels in {{deleteCtrl.country.countryName}}</b>
+    <br>
+    <ul>
+        <li ng-repeat='hotel in deleteCtrl.country.additionalInfo.bestHotels track by $index'>
+           <p> <b>Name: </b> {{hotel.hotelName}}</p> 
+           <p> <b>Address: </b> {{hotel.address}}</p> 
+           <p> <b>Phone: </b> {{hotel.phone | PrefixFilter}}</p> 
+           <p> <b>About: </b> {{hotel.description}}</p> 
+        </li>
+    </ul>
+</div>
+
+<form action="/" ng-init='deleteCtrl.confirmed= true' ng-submit='deleteCtrl.deleteOneCountry()'>
+    <button type='submit' class="btn btn-danger">Confirm</button>
+</form>

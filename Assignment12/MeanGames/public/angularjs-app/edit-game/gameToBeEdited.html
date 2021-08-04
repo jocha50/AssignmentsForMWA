@@ -1,0 +1,69 @@
+<h1> Information about game:
+    <p>
+        {{editCtrl.game.title}}
+      
+    </p>
+</h1>
+
+
+
+
+<form action="/" name ='editCtrl.editGameForm' ng-submit='editCtrl.editOneGame()' class="form-group addGame">
+   Edit game Form
+    <br>
+ 
+        <label for="title">
+            Title: <input id="title" type="text"  name='title'  required  ng-model = 'editCtrl.game.title'  class="form-control"/>
+        </label>
+        <br>
+
+        <label for="price">
+            
+            Price: <input type="text" name='price' id="price" ng-model = 'editCtrl.game.price'  class="form-control"/>
+        </label> 
+        <br>
+
+        <label for="year">
+            Year: <input type="text" name='year' id="year" ng-model = 'editCtrl.game.year' class="form-control"/>
+        </label>
+
+        <br>
+
+        <label for="rate">
+
+            Rating: <input type="text" name='rate' id="rate" pattern="[1-5]" ng-model = 'editCtrl.game.rate'  class="form-control"/>
+        </label>
+
+        <span ng-show='editCtrl.gameForm.rate.$dirty && editCtrl.gameForm.rate.$invalid'>Rating should be between 1 and 5</span>
+
+
+        <br>
+
+        <label for="minPlayers">
+            Minimum Players: <input type="text" name='minPlayers' id="minPlayers" ng-model = 'editCtrl.game.minPlayers'  class="form-control"/>
+        </label>
+
+        <br>
+
+        <label for="maxPlayers">
+            Maximum Players: <input type="text" name='maxPlayers' id="maxPlayers"  ng-model = 'editCtrl.game.maxPlayers' class="form-control"/>
+        </label>
+
+        <br>
+
+        <label for="minAge">
+            Minimum Age: <input type="text" name='minAge' id="minAge" ng-model = 'editCtrl.game.minAge' class="form-control"/>
+        </label>
+
+        <br>
+
+        <label for="designer">
+            Designer Name: <input type="text" name='designer' id="designer" ng-model = 'editCtrl.game.designers' class="form-control"/>
+        </label>
+
+        <br>
+        <input type="submit" value="Update Game" class="btn btn-primary">
+
+
+    
+</form>

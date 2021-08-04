@@ -1,0 +1,17 @@
+
+<a ng-show='travelerCtrl.isLoggedIn()' class="btn btn-success" href="/#!/addCountry"> Add Country </a>
+
+<h1>List of countries to visit</h1>
+
+<ul>
+    <li ng-repeat='country in travelerCtrl.countries track by $index'>
+        <a href="/#!/country/{{country._id}}">{{country.countryName}}</a>
+        <a  class='btn btn-warning buttons' href="/#!/updateCountry/{{country._id}}">Edit</a>    
+        <a class='btn btn-danger buttons' href="/#!/deleteCountry/{{country._id}}">Delete</a> 
+
+    </li>
+    <button ng-disabled='travelerCtrl.deactivatePrevious' ng-click="travelerCtrl.previousPage()" class="btn btn-primary">Previous</button>
+    <button ng-disabled='travelerCtrl.deactivateNext' ng-click='travelerCtrl.nextPage()' class="btn btn-primary">Next</button>
+</ul>
+
+

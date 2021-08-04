@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app ='meanGames'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <title>Mean Games</title>
+</head>
+
+<body>
+    
+    <games-navigation></games-navigation>
+
+    <div class="container" ng-view></div>
+
+
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted text-center">
+                    <a href="https://compro.miu.edu" target="_blank">
+                        <img src="./images/compro-web-logo-442x112.webp" height="60" alt="MIU Compro">
+                    </a>
+                    <br />
+                    <small class="text-black-50  text-center">&copy;
+                        2021 Maharishi International
+                        University. All Rights Reserved.
+                    </small>
+                </p>
+            </div>
+        </footer>
+
+
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="angularjs-app/app.js"></script>
+        <script src="angularjs-app/game-list/gameListController.js"></script>
+        <script src="angularjs-app/dataFactory/dataFactory.js"></script>
+        <script src="angularjs-app/game-display/gameDisplayController.js"></script>
+        <script src="angularjs-app/gameRatingDirective/gameRatingDirective.js"></script>
+        <script src="angularjs-app/edit-game/editGameController.js"></script>
+        <script src="angularjs-app/delete-game/deleteGameController.js"></script>
+        <script src="angularjs-app/dataFactory/userFactory.js"></script>
+        <script src="angularjs-app/registration-controller/registration-controller.js"></script>
+        <script src="angularjs-app/navigation-directive/navigationDirective.js"></script>
+        <script src="angularjs-app/login-controller/login-controller.js"></script>
+        <script src="angularjs-app/authentication/auth-factory.js"></script>
+        <script src="angularjs-app/authentication/auth-interceptor.js"></script>
+        <script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<h1>Country details</h1>
+
+
+<div> Country Name: {{countryCtrl.country.countryName}}</div>
+<div>Capital City: {{countryCtrl.country.capitalCity}}</div>
+<div>Offical Language: {{countryCtrl.country.officialLanguage}}</div>
+<div> Currency Type : {{countryCtrl.country.currency}}</div>
+<div> Population: {{countryCtrl.country.population}}</div>
+<div>Time Zone: {{countryCtrl.country.additionalInfo.timeZone}}
+</div>
+
+<div>Best time to Visit: {{countryCtrl.country.additionalInfo.bestTimeToVisit}}</div>
+
+<div>
+    <br>
+    <b>Best Hotels in {{countryCtrl.country.countryName}}</b>
+    <br>
+    <ul>
+        <li ng-repeat='hotel in countryCtrl.country.additionalInfo.bestHotels track by $index'>
+           <p> <b>Name: </b> {{hotel.hotelName}}</p> 
+           <p> <b>Address: </b> {{hotel.address}}</p> 
+           <p> <b>Phone: </b> {{hotel.phone | PrefixFilter}}</p> 
+           <p> <b>About: </b> {{hotel.description}}</p> 
+        </li>
+    </ul>
+</div>

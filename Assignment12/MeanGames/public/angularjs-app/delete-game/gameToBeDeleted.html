@@ -1,0 +1,23 @@
+<h1> Information about game:
+    <p> <span style="color:red">Are you sure you want to delete 
+        {{deleteCtrl.game.title}}?</span>
+        <game-rating></game-rating>
+    </p>
+</h1>
+
+
+<p>
+    Price: {{deleteCtrl.game.price | currency}}
+    <br>
+    Minimum Players: {{deleteCtrl.game.minPlayers}}
+    <br>
+    Maximum Players: {{deleteCtrl.game.maxPlayers}}
+    <br>
+    Minimum Age: {{deleteCtrl.game.minAge}}
+    <br>
+    Publisher: {{deleteCtrl.game.publisher.name}}
+</p>
+
+<form action="/" ng-init='deleteCtrl.confirmed= true' ng-submit='deleteCtrl.deleteOneGame()'>
+    <button type='submit' class="btn btn-danger">Confirm</button>
+</form>
