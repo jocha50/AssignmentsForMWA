@@ -1,0 +1,39 @@
+<p>register-user works!</p>
+
+
+<h1>Register</h1>
+<!-- <div style="color: green;" ng-show='registerCtrl.registered'>{{registerCtrl.registered}}</div> -->
+<!-- <div ng-hide='registerCtrl.registered'> -->
+    
+<form [formGroup]='userForm' (submit)='registerUser()'>
+    <div>
+        <label for="username">
+            <input type="text" class="form-control" id='username' required placeholder="UserName"
+            formControlName='userName'>
+        </label>
+    </div>
+
+    <div>
+        <label for="name">
+            <input type="text" class="form-control" id='name' placeholder="name" formControlName='name'>
+        </label>
+    </div>
+
+    <div>
+        <label for="password">
+            <input type="password" class="form-control" id='password' name="password" required placeholder="password"
+            formControlName='password' autocapitalize="none">
+        </label>
+    </div>
+    <div>
+        <label for="confirmPassword">
+            <input type="password" class="form-control" id='confirmPassword' name="confirmPassword" required placeholder="confirm password"
+                 autocapitalize="none">
+        </label>
+    </div>
+    <!-- <span style="color: red;" ng-show='registerCtrl.error'>{{registerCtrl.error}}</span><br> -->
+    <button type="submit" class="btn btn-success">Add User</button>
+
+
+</form>
+<!-- </div> -->

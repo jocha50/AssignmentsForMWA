@@ -1,0 +1,33 @@
+<h2>Mean Games</h2>
+
+<!-- Title: {{game.title}} <br>
+Price: {{game.price | currency}} <br>
+year: {{game.year}} -->
+
+
+
+<ul>
+    <li *ngFor='let game of games'>
+        <a routerLink="/details/{{game._id}}"> {{game.title}}</a>
+        <a class='btn btn-warning buttons' routerLink="/editGame/{{game._id}}">Edit</a>
+        <a class='btn btn-danger buttons' routerLink="/deleteGame/{{game._id}}">Delete</a>
+    </li>
+    <button [disabled]='!offset' (click)='previous()' class="btn btn-primary margin">Previous</button>
+    <button [disabled]='maxReached' (click)='next()' class="btn btn-primary margin">Next</button>
+</ul>
+
+
+
+<!-- Template driven form -->
+
+<!-- <form (onSubmit)='save()'>
+<input type="text" name="title" id="" [(ngModel)] = 'title' style="color:black">
+
+</form> -->
+
+
+<!-- reactive form -->
+<!-- <form [formGroup]='gameForm' (onSubmit)='gameSave()'>
+    <input type="text" name="title" id="" formControlName='title' style="color:black">
+    <input type="submit" value="save">
+    </form> -->

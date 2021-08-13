@@ -1,0 +1,69 @@
+<h1> Information about game:
+    <p>
+        {{game.title}}
+      
+    </p>
+</h1>
+
+
+
+
+<form [formGroup]='editForm' (submit)='fullUpdateGame()'  class="form-group addGame">
+   Edit game Form
+    <br>
+ 
+        <label for="title">
+            Title: <input id="title" type="text"  name='title'  required   formControlName='title' class="form-control"/>
+        </label>
+        <br>
+
+        <label for="price">
+            
+            Price: <input type="text" name='price' id="price" formControlName='price'  class="form-control"/>
+        </label> 
+        <br>
+
+        <label for="year">
+            Year: <input type="text" name='year' id="year" formControlName='year' class="form-control"/>
+        </label>
+
+        <br>
+
+        <label for="rate">
+
+            Rating: <input type="text" name='rate' id="rate" pattern="[1-5]" formControlName='rate'  class="form-control"/>
+        </label>
+
+        <!-- <span ng-show='editCtrl.gameForm.rate.$dirty && editCtrl.gameForm.rate.$invalid'>Rating should be between 1 and 5</span> -->
+
+
+        <br>
+
+        <label for="minPlayers">
+            Minimum Players: <input type="text" name='minPlayers' id="minPlayers" formControlName='minPlayers' class="form-control"/>
+        </label>
+
+        <br>
+
+        <label for="maxPlayers">
+            Maximum Players: <input type="text" name='maxPlayers' id="maxPlayers"  formControlName='maxPlayers' class="form-control"/>
+        </label>
+
+        <br>
+
+        <label for="minAge">
+            Minimum Age: <input type="text" name='minAge' id="minAge" formControlName='minAge' class="form-control"/>
+        </label>
+
+        <br>
+
+        <label for="designer">
+            Designer Name: <input type="text" name='designer' id="designer" formControlName='designer' class="form-control"/>
+        </label>
+
+        <br>
+        <input type="submit" value="Update Game" class="btn btn-primary">
+
+
+    
+</form>

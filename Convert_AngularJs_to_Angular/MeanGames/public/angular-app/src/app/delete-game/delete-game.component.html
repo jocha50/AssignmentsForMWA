@@ -1,0 +1,23 @@
+<h1 style="color: red;">  Are you sure you want to delete
+    <p>
+        {{game.title}}
+        <!-- <app-game-ratting [ratting]='game.rate'></app-game-ratting> -->
+        ?
+    </p>
+  
+</h1>
+
+
+<p>
+    Price: {{game.price | currency}}
+    <br>
+    Minimum Players: {{game.minPlayers}}
+    <br>
+    Maximum Players: {{game.maxPlayers}}
+    <br>
+    Minimum Age: {{game.minAge}}
+    <br>
+   
+</p>
+
+<button class="btn btn-danger" (click)='confirm()'>Confirm</button>

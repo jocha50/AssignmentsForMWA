@@ -1,0 +1,57 @@
+<h1>Update Country </h1>
+
+
+<form action="/" name ='updateCtrl.updateCountryForm' ng-submit='updateCtrl.updateCountry()' class="form-group">
+    Add Country Form
+    <br>
+        <label for="countryName">
+            Country Name: <input id="countryName" type="text" name='countryName' required ng-model = 'updateCtrl.country.countryName' style='color:black' class="form-control"/>
+        </label>
+        <br>
+
+        <label for="capitalCity">
+            Capital City: <input type="text" name='capitalCity' id="capitalCity" ng-model = 'updateCtrl.country.capitalCity' style='color:black' class="form-control"/>
+        </label> 
+        <br>
+
+        <label for="officialLanguage">
+            Official Language: <input type="text" name='officialLanguage' id="officialLanguage" ng-model = 'updateCtrl.country.officialLanguage' style='color:black' class="form-control"/>
+        </label>
+
+        <br>
+
+        <label for="currency">
+            Currency: <input type="text" name='currency' id="currency"  ng-model = 'updateCtrl.country.currency' style='color:black' class="form-control"/>
+        </label>
+
+      
+        <br>
+
+        <label for="population">
+            Population: <input type="text" name='population' id="population" ng-model = 'updateCtrl.country.population' style='color:black' class="form-control"/>
+        </label>
+
+        <br>
+
+        <label for="lat">
+            Coordinates latitude: <input type="text" name='lat' id="lat" ng-model = 'updateCtrl.country.lat' pattern="[-+]?([0-9]|[0-8][0-9]|90)*\.?[0-9]{1,4}" style='color:black' class="form-control"/>
+        </label>
+
+  
+
+        <label for="lng">
+            Coordinates longitude: <input type="text" name='lng' id="lng"  ng-model = 'updateCtrl.country.lng'  pattern="[-+]?([0-9]|[0-9][0-9]|[0-9][0-8][0-9]|180)*\.?[0-9]{1,4}" style='color:black' class="form-control"/>
+        </label>
+
+        <br>
+        <span style="color:red" ng-show='updateCtrl.updateCountryForm.lat.$dirty && updateCtrl.updateCountryForm.lat.$invalid' >Latitude must be between -90 and 90 degrees</span>
+        <span style="color:red" ng-show='updateCtrl.updateCountryForm.lng.$dirty && updateCtrl.updateCountryForm.lng.$invalid' >Latitude must be between -90 and 90 degrees</span>
+
+        <br>
+        <input type="submit" value="Update Country" class="btn btn-primary">
+
+        <br>
+        <span style="color:red" ng-show='updateCtrl.updateCountryForm.$dirty && updateCtrl.updateCountryForm.$invalid && updateCtrl.submitError' >Make sure you fill out all the neccessory fileds</span>
+
+    
+</form>

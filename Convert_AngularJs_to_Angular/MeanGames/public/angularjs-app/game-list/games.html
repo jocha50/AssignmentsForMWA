@@ -1,0 +1,88 @@
+<h1>{{vm.title}}</h1>
+
+
+<ul>
+    <li ng-repeat='game in vm.games'>
+        <div>
+            <a href="/#!/game/{{game._id}}">{{game.title}}</a>
+            <a class='btn btn-warning buttons' href="/#!/editGame/{{game._id}}">Edit</a>
+            <a class='btn btn-danger buttons' href="/#!/deleteGame/{{game._id}}">Delete</a>
+        </div>
+    </li>
+    
+    <button ng-disabled='vm.deactivatePrevious' ng-click="vm.previousPage()" class="btn btn-primary">Previous</button>
+    <button ng-disabled='vm.deactivateNext' ng-click='vm.nextPage()' class="btn btn-primary">Next</button>
+</ul>
+
+
+
+<div ng-show='vm.isLoggedIn()'>
+
+    <strong style="color: green;" ng-show='vm.status'>{{vm.status}}</strong>
+    <form action="" name='vm.gameForm' ng-submit='vm.addGame(); event.preventDefault()' class="form-group addGame">
+        Add game Form
+        <br>
+        <label for="title">
+            Title: <input id="title" type="text" name='title' required ng-model='vm.newGame.title' style='color:black'
+                class="form-control" />
+        </label>
+        <br>
+
+        <label for="price">
+            Price: <input type="text" name='price' id="price" ng-model='vm.newGame.price' style='color:black'
+                class="form-control" />
+        </label>
+        <br>
+
+        <label for="year">
+            Year: <input type="text" name='year' id="year" ng-model='vm.newGame.year' style='color:black'
+                class="form-control" />
+        </label>
+
+        <br>
+
+        <label for="rate">
+            Rating: <input type="text" name='rate' id="rate" pattern="[1-5]" ng-model='vm.newGame.rate'
+                style='color:black' class="form-control" />
+        </label>
+
+        <span ng-show='vm.gameForm.rate.$dirty && vm.gameForm.rate.$invalid'>Rating should be between 1 and 5</span>
+
+
+        <br>
+
+        <label for="minPlayers">
+            Minimum Players: <input type="text" name='minPlayers' id="minPlayers" ng-model='vm.newGame.minPlayers'
+                style='color:black' class="form-control" />
+        </label>
+
+        <br>
+
+        <label for="maxPlayers">
+            Maximum Players: <input type="text" name='maxPlayers' id="maxPlayers" ng-model='vm.newGame.maxPlayers'
+                style='color:black' class="form-control" />
+        </label>
+
+        <br>
+
+        <label for="minAge">
+            Minimum Age: <input type="text" name='minAge' id="minAge" ng-model='vm.newGame.minAge' style='color:black'
+                class="form-control" />
+        </label>
+
+        <br>
+
+        <label for="designer">
+            Designer Name: <input type="text" name='designer' id="designer" ng-model='vm.newGame.designers'
+                style='color:black' class="form-control" />
+        </label>
+
+        <br>
+        <input type="submit" value="Add Game" class="btn btn-success">
+
+
+
+    </form>
+
+
+</div>
